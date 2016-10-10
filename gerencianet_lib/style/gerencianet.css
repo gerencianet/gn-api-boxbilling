@@ -1,0 +1,103 @@
+.botao {
+    background-color: #f26522;
+    background-image:url("/bb-library/Payment/Adapter/gerencianet_lib/images/gn-laranja.svg");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position-x: 6px;
+    background-position-y: 4px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    border: none;
+    padding: 10px 36px 10px 58px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.botao:hover:enabled {
+    background-color: #ff751a;
+    background-image:url("/bb-library/Payment/Adapter/gerencianet_lib/images/gn-laranja.svg");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    color: white;
+    background-position-x: 6px;
+    background-position-y: 4px;
+    cursor: pointer;
+}
+
+.botao:disabled {
+    background-color: #DCDCDC;
+    cursor:not-allowed;
+}
+
+#text-gnbutton {
+    margin-left: 5px;
+}
+#desconto-gn{
+    font-size: 13px;
+}
+#customer-document{
+    height: 25px;
+}
+.waiting-process{
+   cursor: progress !important;
+}
+
+.gn-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.gn-modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.gn-close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.gn-close:hover,
+.gn-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.gn-modal-header {
+    padding: 2px 37px;
+    background-color: #f26522;
+    color: white;
+}
+
+.gn-modal-header h2{
+    color: white;
+}
+
+.gn-modal-body {
+    padding: 2px 16px; 
+    font-weight: bold;
+    margin: 20px;
+}
+
+.gn-modal-footer {
+    padding: 2px 16px;
+    background-color: #d1d2d4;
+    color: white;
+}
