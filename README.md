@@ -62,6 +62,6 @@ A API Gerencianet poderá retornar erros referentes à geração da cobrança. P
 ## Requisitos
 
 * Versão mínima do PHP: 5.4.39
-* Versão mínima do WHMCS: 4.19
+* Versão mínima do Boxbilling: 4.19
 
 
