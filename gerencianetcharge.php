@@ -213,9 +213,9 @@ class Payment_Adapter_GerencianetCharge
 
     private function _generateForm($data, $chargeId=0, $method = 'post')
     {
-        $form = '<link rel="stylesheet" href="/bb-library/Payment/Adapter/gerencianet_lib/style/gerencianet.css">
-                <script src="/bb-themes/boxbilling/assets/jquery.min.js"></script>
-                <script src="/bb-library/Payment/Adapter/gerencianet_lib//gerencianet.js"></script>';
+        $form = '<link rel="stylesheet" href="bb-library/Payment/Adapter/gerencianet_lib/style/gerencianet.css"> 
+                <script src="bb-themes/boxbilling/assets/jquery.min.js"></script>
+                <script src="bb-library/Payment/Adapter/gerencianet_lib/gerencianet.js"></script>';
 
         $form .= '<div id="myModal" class="gn-modal">
                   <!-- Modal content -->

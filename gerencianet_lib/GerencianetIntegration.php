@@ -49,7 +49,7 @@ class GerencianetIntegration {
 
 	public function create_charge($items, $order_id = null, $notification_url = '', $shipping = null) {
 
-		$options = GerencianetIntegration::get_gn_api_credentials();
+		$options = $this->get_gn_api_credentials();
 
 		$metadata = array (
 		    'custom_id' => strval($order_id),
@@ -94,7 +94,7 @@ class GerencianetIntegration {
 
 	public function detail_charge($charge_id) {
 
-		$options = GerencianetIntegration::get_gn_api_credentials();
+		$options = $this->get_gn_api_credentials();
 
 		$params = array("id" => $charge_id);
 
@@ -123,7 +123,7 @@ class GerencianetIntegration {
 
 	public function cancel_charge($charge_id)
 	{
-		$options = GerencianetIntegration::get_gn_api_credentials();
+		$options = $this->get_gn_api_credentials();
 		$params = array ('id' => $charge_id);
 
 		try {
@@ -150,8 +150,8 @@ class GerencianetIntegration {
 		}
 	}
 
-	public function pay_billet($charge_id, $expirationDate, $customer, $instructions, $discount=false) {
-		$options = GerencianetIntegration::get_gn_api_credentials();
+	public function pay_billet($charge_id, $expirationDate, $customer, $instructions=null, $discount=false) {
+		$options = $this->get_gn_api_credentials();
 		$params = array ('id' => $charge_id);
 		
 		if ($discount) {
@@ -199,7 +199,6 @@ class GerencianetIntegration {
 		try {
 		    $api = new Gerencianet($options);
 		    $charge = $api->payCharge($params, $body);
-
 		    return GerencianetIntegration::result_api($charge, true);
 		} catch (GerencianetException $e) {
 		    $errorResponse = array(
@@ -221,7 +220,7 @@ class GerencianetIntegration {
 
 	public function notificationCheck($notificationToken) {
 
-		$options = GerencianetIntegration::get_gn_api_credentials();
+		$options = $this->get_gn_api_credentials();
 
 		$params = array (
 		  	'token' => $notificationToken

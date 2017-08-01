@@ -1,10 +1,10 @@
 .botao {
     background-color: #f26522;
-    background-image:url("/bb-library/Payment/Adapter/gerencianet_lib/images/gn-laranja.svg");
-    background-size: 30px;
+    background-image:url("../images/gn-laranja.svg"); 
+    background-size: 34px;
     background-repeat: no-repeat;
-    background-position-x: 6px;
-    background-position-y: 4px;
+    background-position-x: 3px;
+    background-position-y: 2px;
     font-weight: bold;
     font-size: 20px;
     color: white;
@@ -15,17 +15,18 @@
 }
 .botao:hover:enabled {
     background-color: #ff751a;
-    background-image:url("/bb-library/Payment/Adapter/gerencianet_lib/images/gn-laranja.svg");
-    background-size: 30px;
+    background-image:url("../images/gn-laranja.svg"); 
+    background-size: 34px;
     background-repeat: no-repeat;
     color: white;
-    background-position-x: 6px;
-    background-position-y: 4px;
+    background-position-x: 3px;
+    background-position-y: 2px;
     cursor: pointer;
 }
 
 .botao:disabled {
     background-color: #DCDCDC;
+    background-image:url("../images/gn-cinza.svg"); 
     cursor:not-allowed;
 }
 

@@ -1,5 +1,5 @@
 function sendData(data)
- {        
+{   
     var modal = document.getElementById('myModal');
     var span = document.getElementsByClassName("gn-close")[0];
 
@@ -7,7 +7,7 @@ function sendData(data)
     document.getElementById("gnbutton").disabled = true;
     data.customer_document = $("#customer-document").val();
     $.post("bb-library/Payment/Adapter/gerencianet_lib/GenerateBillet.php",data,
-      function(retorno){
+    function(retorno){
         $('body').removeClass('waiting-process');
         if(retorno.code == 200)
             window.location.replace(retorno.data.link);
@@ -103,12 +103,14 @@ function verifyCNPJ(cnpj) {
 function valida(o){
     v_obj=o
     v_obj2=document.getElementById("gnbutton");
+    var customerDocTF = document.getElementById("customer-document");
+
 
     v = v_obj.value;
     v=v.replace(/\D/g,"");
     if (v.length <= 11) 
     { 
-        if(!verifyCPF(v)) 
+        if(!verifyCPF(v) && (customerDocTF.checked == false)) 
         {
             v_obj2.disabled=true;
             alert("CPF inválido.");
@@ -117,7 +119,7 @@ function valida(o){
     } 
     else
     {
-        if(!verifyCNPJ(v))
+        if(!verifyCNPJ(v) && (customerDocTF.checked == false))
         {
             v_obj2.disabled=true;
             alert("CNPJ inválido.");

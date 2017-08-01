@@ -28,7 +28,7 @@ class Request
         'base_uri' => $this->config['baseUri'],
         'headers' => [
           'Content-Type' => 'application/json',
-          'api-sdk' => 'php-' . $composerData['version'],
+          'api-sdk' => 'boxbilling-0.2.0',
           'partner-token' => $partner_token
           ],
       ]);

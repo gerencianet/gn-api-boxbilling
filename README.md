@@ -1,4 +1,4 @@
-# Módulo de Integração Gerencianet para Boxbilling Oficial - Versão 0.1.0 (Beta) #
+# Módulo de Integração Gerencianet para Boxbilling Oficial - Versão 0.2.0 (Beta) #
 
 O módulo Gerencianet para o Boxbilling permite gerar boletos com registro por meio da nossa API.
 Compatível com as versões superiores a versão 4.19 do Boxbilling.
@@ -61,7 +61,7 @@ A API Gerencianet poderá retornar erros referentes à geração da cobrança. P
 
 ## Requisitos
 
-* Versão mínima do PHP: 5.4.39
+* Versão mínima do PHP: 5.5
 * Versão mínima do Boxbilling: 4.19
 
 

@@ -2,6 +2,8 @@
 include_once 'GerencianetIntegration.php';
 include_once 'GerencianetValidation.php';
 
+date_default_timezone_set('UTC');
+
 $data = $_POST;
 
 $document 	  			= preg_replace('/[^0-9]/', '',$data['customer_document']);
@@ -101,6 +103,7 @@ function generateBillet($items, $invoiceId=null, $chargeId, $dueDate, $customer,
 	{
 		$gnApiResult = $gnIntegration->create_charge($items, $invoiceId, $urlCallback);
 		$resultCheck = json_decode($gnApiResult, true);
+
 		if ($resultCheck['code'] != 0)
 			$chargeId = $resultCheck['data']['charge_id'];
 		else die($gnApiResult);
@@ -108,7 +111,7 @@ function generateBillet($items, $invoiceId=null, $chargeId, $dueDate, $customer,
 
 	$resultPayment = $gnIntegration->pay_billet($chargeId, $dueDate, $customer);
 	$resultPaymentDecoded = json_decode($resultPayment, true);
-	echo $resultPayment;
+	die($resultPayment);
 }
 
 ?>
