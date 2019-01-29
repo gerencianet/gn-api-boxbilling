@@ -118,9 +118,9 @@ class Payment_Adapter_GerencianetCharge
                 {  
                     $existCharge = true;
                     $existingChargeId = $chargeId;
-                    if(isset($chargeDetails['data']['payment']['banking_billet']['link']))
+                    if(isset($chargeDetails['data']['payment']['banking_billet']['pdf']['charge']))
                     {
-                        $url  = $chargeDetails['data']['payment']['banking_billet']['link'];
+                        $url  = $chargeDetails['data']['payment']['banking_billet']['pdf']['charge'];
                         $code = "<meta http-equiv='refresh' content='0;url=" . $url . "'>";
                         return $code;
                     }

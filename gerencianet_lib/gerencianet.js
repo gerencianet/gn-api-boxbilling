@@ -10,7 +10,7 @@ function sendData(data)
     function(retorno){
         $('body').removeClass('waiting-process');
         if(retorno.code == 200)
-            window.location.replace(retorno.data.link);
+            window.location.replace(retorno.data.pdf.charge);
         else{
             $('#gn-modal-body').html(retorno.message);
             modal.style.display = "block";
